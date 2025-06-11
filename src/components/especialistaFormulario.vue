@@ -58,7 +58,7 @@
     <div class="flex flex-col gap-1">
       <label class="font-semibold text-gray-700">Horario:</label>
       <input
-        v-model="localForm.horario"
+        v-model="localForm.horarios"
         type="text"
         required
         class="input focus:ring-2 focus:ring-blue-400"
@@ -104,7 +104,7 @@ interface EspecialistaForm {
   especialidad: string
   registro_profesional: number
   dias: string
-  horario: string
+  horarios: string
   activo: boolean
 }
 
@@ -119,7 +119,7 @@ const localForm = ref<EspecialistaForm>({
   especialidad: '',
   registro_profesional: 0,
   dias: '',
-  horario: '',
+  horarios: '',
   activo: true,
 })
 
@@ -158,7 +158,7 @@ function resetForm() {
     especialidad: '',
     registro_profesional: 0,
     dias: '',
-    horario: '',
+    horarios: '',
     activo: true,
   }
   diasSeleccionados.value = []
