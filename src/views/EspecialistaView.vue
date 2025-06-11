@@ -36,7 +36,7 @@
             <td class="px-6 py-4 text-center text-gray-700 border border-gray-200">{{ esp.especialidad }}</td>
             <td class="px-6 py-4 text-center text-gray-700 border border-gray-200">{{ esp.registro_profesional }}</td>
             <td class="px-6 py-4 text-center text-gray-600 border border-gray-200">{{ esp.dias || '-' }}</td>
-            <td class="px-6 py-4 text-center text-gray-600 border border-gray-200">{{ esp.horario || '-' }}</td>
+            <td class="px-6 py-4 text-center text-gray-600 border border-gray-200">{{ esp.horarios || '-' }}</td>
             <td class="px-6 py-4 text-center border border-gray-200">
               <span
                 :class="esp.activo
@@ -84,7 +84,7 @@ interface Especialista {
   especialidad: string
   registro_profesional: number
   dias: string // Ejemplo: "Lunes,Martes"
-  horario: string // Ejemplo: "8:00-12:00"
+  horarios: string // Ejemplo: "8:00-12:00"
   activo: boolean
 }
 
@@ -99,7 +99,7 @@ async function cargar() {
     especialidad: esp.especialidad,
     registro_profesional: esp.registroProfesional,
     dias: esp.dias,
-    horario: esp.horario,
+    horarios: esp.horarios,
     activo: esp.activo,
   }))
 }
